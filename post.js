@@ -3,7 +3,7 @@ console.log('labas')
 
 
 let queryParams = document.location.search;
-console.log(queryParams)
+console.dir(queryParams)
 let urlParams = new URLSearchParams(queryParams)
 let postId = urlParams.get('post_id');
 
