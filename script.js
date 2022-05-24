@@ -1,4 +1,4 @@
-fetch('https://jsonplacehoclder.typicode.com/posts?_limit=15&_start=7')
+fetch('https://jsonplaceholder.typicode.com/posts?_limit=15&_start=7')
 
   .then(res => res.json())
   .then(posts => {
