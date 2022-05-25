@@ -36,7 +36,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userId)
                                   <li><strong>Company Name:</strong> ${companyName}</li>
                                  </ul>`;
   })
-fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
+  fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
   .then(res => res.json())
   .then(posts => {
     let userPosts = document.querySelector('#user-posts');
@@ -44,9 +44,11 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
     postsListTitle.textContent = 'User Posts:';
     let postsList = document.createElement('ul');
     userPosts.append(postsListTitle, postsList);
+
     posts.map(post => {
       let postItem = document.createElement('li');
       postItem.innerHTML = `<a href="./post.html?post_id=${post.id}">${post.title}</a>`;
+
       postsList.append(postItem);
     })
   })
